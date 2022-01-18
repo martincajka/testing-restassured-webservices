@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<bookstore>
+    <book price="21.99" pages="499" isbn="0374533555" available="true">
+        <title>Thinking, Fast and Slow</title>
+        <author>Daniel Kahneman</author>
+        <publisher date="2013-04-02">Farrar, Straus and Giroux</publisher>
+        <formats>
+            <format>HARDCOVER</format>
+            <format>AUDIOBOOK</format>
+            <format>KINDLE</format>
+        </formats>
+        <reviews overallRating="4.5">
+            <review rating="5.0">
+                <comment></comment>
+            </review>
+            <review rating="4.0">
+                <comment>The best book I have ever read!!!</comment>
+            </review>
+            <review rating="4.5">
+                <comment></comment>
+            </review>
+        </reviews>
+    </book>
+    <book price="13.50" pages="336" isbn="0316471917" available="true">
+        <title>Utopia for Realists: How We Can Build the Ideal World</title>
+        <author>Rutger Bregman</author>
+        <publisher date="2018-03-27">Back Bay Books</publisher>
+        <formats>
+            <format>HARDCOVER</format>
+        </formats>
+        <reviews overallRating="4.0">
+            <review rating="4.0">
+                <comment></comment>
+            </review>
+        </reviews>
+    </book>
+    <book price="12.53" pages="464" isbn="1982137274" available="false">
+        <title>The 7 Habits of Highly Effective People: 30th Anniversary Edition</title>
+        <author>Stephen R. Covey</author>
+        <publisher date="2020-05-19">Back Bay Books</publisher>
+        <formats>
+            <format>HARDCOVER</format>
+            <format>AUDIOBOOK</format>
+        </formats>
+        <reviews>
+        </reviews>
+    </book>
+</bookstore>

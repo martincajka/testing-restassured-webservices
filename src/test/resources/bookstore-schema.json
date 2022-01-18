@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Bookstore",
+  "type": "object",
+  "properties": {
+    "bookstore": {
+      "type": "array",
+      "description": "Contains all books from our bookstore",
+      "items": {
+        "type": "object",
+        "description": "Book object",
+        "properties": {
+          "title": {
+            "description": "Title of the book",
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          },
+          "numberOfPages": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMinimum": true
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "publicationDate": {
+            "type": "string"
+          },
+          "isbn": {
+            "type": "string"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "formats": {
+            "description": "Available formats of the book (HARDCOVER, AUDIOBOOK, KINDLE)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "book_reviews": {
+            "description": "Book review - Present if at least one review was added by users",
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "overallRating": {
+                    "type": "number"
+                  },
+                  "reviews": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "rating": {
+                          "type": "number"
+                        },
+                        "comment": {
+                          "description": "Review comment is not mandatory",
+                          "anyOf": [
+                            {
+                              "type": "string"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "title",
+          "author",
+          "price"
+        ]
+      }
+    }
+  },
+  "required": [
+    "bookstore"
+  ]
+}

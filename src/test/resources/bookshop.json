@@ -1,0 +1,74 @@
+{
+  "bookstore": [
+    {
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "price": 21.99,
+      "numberOfPages": 496,
+      "publisher": "Farrar, Straus and Giroux",
+      "publicationDate": "2013-04-02",
+      "isbn": "0374533555",
+      "available": true,
+      "formats": [
+        "HARDCOVER",
+        "AUDIOBOOK",
+        "KINDLE"
+      ],
+      "book_reviews": {
+        "overallRating": 4.5,
+        "reviews": [
+          {
+            "rating": 5.0,
+            "comment": null
+          },
+          {
+            "rating": 4.0,
+            "comment": "The best book I have ever read!!!"
+          },
+          {
+            "rating": 4.5,
+            "comment": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "Utopia for Realists: How We Can Build the Ideal World",
+      "author": "Rutger Bregman",
+      "price": 13.50,
+      "numberOfPages": 336,
+      "publisher": "Back Bay Books",
+      "publicationDate": "2018-03-27",
+      "isbn": "0316471917",
+      "available": true,
+      "formats": [
+        "HARDCOVER"
+      ],
+      "book_reviews": {
+        "overallRating": 4.0,
+        "reviews": [
+          {
+            "rating": 4.0,
+            "comment": null
+          }
+        ]
+      }
+    },
+    {
+      "title": "The 7 Habits of Highly Effective People: 30th Anniversary Edition",
+      "author": "Stephen R. Covey",
+      "price": 12.53,
+      "numberOfPages": 464,
+      "publisher": "Simon & Schuster",
+      "publicationDate": "2020-05-19",
+      "isbn": "1982137274",
+      "available": false,
+      "formats": [
+        "HARDCOVER",
+        "AUDIOBOOK"
+      ],
+      "book_reviews": null
+    }
+  ]
+}
+
