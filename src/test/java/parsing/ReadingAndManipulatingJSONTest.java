@@ -5,6 +5,7 @@ import io.restassured.path.json.JsonPath;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import utils.DateValidator;
 import utils.DateValidatorUsingDateTimeFormatter;
 
 import java.io.IOException;
@@ -54,7 +55,7 @@ public class ReadingAndManipulatingJSONTest {
     @ParsingTest
     void allBooksHasCorrectPublicationDateFormat() {
         List<String> publicationDates = json.getList("bookstore.publicationDate");
-        DateValidatorUsingDateTimeFormatter validator = new DateValidatorUsingDateTimeFormatter(DateTimeFormatter.ISO_LOCAL_DATE);
+        DateValidator validator = new DateValidatorUsingDateTimeFormatter(DateTimeFormatter.ISO_LOCAL_DATE);
 
         assertTrue(publicationDates.stream().allMatch(validator::isValid));
     }

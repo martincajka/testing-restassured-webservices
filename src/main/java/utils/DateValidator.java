@@ -2,7 +2,7 @@ package utils;
 
 
 
-interface DateValidator {
+public interface DateValidator {
     boolean isValid(String dateStr);
 }
 
