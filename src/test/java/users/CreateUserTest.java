@@ -34,7 +34,7 @@ public class CreateUserTest {
 
     @Test
     public void createUserTest() {
-        UserRequest userRequest = new UserRequest();
+        CreateUserRequest userRequest = new CreateUserRequest();
         userRequest.setName("morpheus");
         userRequest.setJob("leader");
 

@@ -1,13 +1,13 @@
 package users;
 
-public class UserRequest {
+public class CreateUserRequest {
     private String name;
     private String job;
 
-    public UserRequest() {
+    public CreateUserRequest() {
     }
 
-    public UserRequest(String name, String job) {
+    public CreateUserRequest(String name, String job) {
         this.name = name;
         this.job = job;
     }
