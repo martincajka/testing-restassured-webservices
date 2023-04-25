@@ -10,7 +10,7 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class RegisterUser {
+public class RegisterUserTest {
 
     @BeforeEach
     void setUp() {
