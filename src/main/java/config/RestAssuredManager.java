@@ -7,10 +7,10 @@ public class RestAssuredManager {
     public static void configure(String configFolder) {
         Environment environment = System.getProperty("env") == null ? Environment.DEV : Environment.valueOf(System.getProperty("env").toUpperCase());
         ConfigurationProvider configurationProvider = new PropertiesConfigurationProvider(environment, configFolder);
-        configurationProvider.getConfiguration().forEach(RestAssuredManager::setConfiguration);
+        configurationProvider.getConfiguration().forEach(RestAssuredManager::applyConfiguration);
     }
 
-    private static void setConfiguration(ConfigOptions option, String value) {
+    private static void applyConfiguration(ConfigOptions option, String value) {
         switch (option) {
             case BASE_URL:
                 RestAssured.baseURI = value;

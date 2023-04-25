@@ -2,7 +2,9 @@ package users;
 
 import config.RestAssuredManager;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import users.dto.UserRequest;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.notNullValue;
@@ -32,11 +34,12 @@ public class CreateUserTest {
     }*/
 
 
-    @Test
-    public void createUserTest() {
-        CreateUserRequest userRequest = new CreateUserRequest();
-        userRequest.setName("morpheus");
-        userRequest.setJob("leader");
+    @ParameterizedTest
+    @CsvSource({"John,IT Specialist", "Maria,HR Manager", "Paul,CEO"})
+    public void createUserTest(String name, String job) {
+        UserRequest userRequest = new UserRequest();
+        userRequest.setName(name);
+        userRequest.setJob(job);
 
         given()
                 .basePath("/api/users")

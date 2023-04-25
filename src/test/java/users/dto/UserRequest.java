@@ -1,13 +1,13 @@
-package users;
+package users.dto;
 
-public class CreateUserRequest {
+public class UserRequest {
     private String name;
     private String job;
 
-    public CreateUserRequest() {
+    public UserRequest() {
     }
 
-    public CreateUserRequest(String name, String job) {
+    public UserRequest(String name, String job) {
         this.name = name;
         this.job = job;
     }
